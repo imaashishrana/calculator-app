@@ -1,0 +1,94 @@
+/* Container for the Calculator */
+.container {
+  width: 320px;
+  margin: 50px auto;
+  background-color: #282c34; /* Dark background */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* Display Input */
+.container input[type="text"] {
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: white;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+.container button {
+  width: 22%; /* Slightly less than 25% to create spacing */
+  height: 50px;
+  margin: 5px 1%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Special Buttons */
+.container button[value="AC"],
+.container button[value="Back"] {
+  background-color: #d9534f; /* Red for AC and Back */
+  color: white;
+}
+
+.container button[value="="] {
+  background-color: #5cb85c; /* Green for Equals */
+  color: white;
+}
+
+/* Operator Buttons */
+.container button[value="("],
+.container button[value=")"],
+.container button[value="%"],
+.container button[value="*"],
+.container button[value="-"],
+.container button[value="+"],
+.container button[value="/"] {
+  background-color: #f0ad4e; /* Orange for Operators */
+  color: white;
+}
+
+/* Number Buttons */
+.container button {
+  background-color: #333; /* Gray for numbers */
+  color: white;
+}
+
+/* Hover Effects */
+.container button:hover {
+  background-color: #555; /* Slightly lighter on hover */
+  transform: scale(1.05); /* Button grows slightly */
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .container {
+    width: 90%;
+  }
+
+  .container input[type="text"] {
+    font-size: 1.2rem;
+    height: 45px;
+  }
+
+  .container button {
+    width: 22%;
+    height: 45px;
+    font-size: 1rem;
+  }
+}
